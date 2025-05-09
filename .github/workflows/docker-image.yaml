@@ -46,7 +46,7 @@ jobs:
           docker build \
             --platform linux/arm64 \
             --build-arg PYTHON_VERSION=${{ steps.vars.outputs.PYTHON_VERSION }} \
-            -t ${{ secrets.DOCKER_USERNAME }}/python-for-bot:${{ steps.vars.outputs.TAG_NAME }} .
+            -t ${{ secrets.DOCKER_USERNAME }}/python-for-bot_arm64:${{ steps.vars.outputs.TAG_NAME }} .
 
       - name: Push Docker image
         run: |
